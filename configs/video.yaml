@@ -1,0 +1,57 @@
+data:
+  dataset: video
+  metrics: [[top1], [top5], [flops, params]]
+
+network:
+  input_dim: AUTO
+  shared_layer: 256
+  seperated_layer: 128
+  activation: swish  # [relu, relu6, tanh, swish]
+  layer1_drop_ratio: 0.5
+  layer2_drop_ratio: [0.5, 0.5, 0]
+
+optimization:
+  epoch: 200
+  batch_size: 128
+  criterion: smoothl1  # [mse, smoothl1, l1]
+
+  optimizer: adam  # [adam, sgd, adamw]
+  adam_param:
+    lr: 1.0e-2
+    weight_decay: 1.0e-7
+  sgd_param:
+    lr: 1.0e-2
+    weight_decay: 1.0e-7
+    momentum: 0.9
+    nesterov: False
+
+  scheduler: onecycle  # [exp, step, cosine, onecycle]
+  exp_scheduler:
+    gamma: 0.97
+  step_scheduler:
+    milestones: [30, 60, 90]
+    gamma: 0.1
+  onecycle_scheduler:
+    pct_start: 0.3
+    div_factor: 10
+    base_momentum: 0.85
+    max_momentum: 0.95
+  cosine_scheduler:
+    eta_min: 0
+
+log_dir: output/
+log_interval: 50
+SEED: 233
+CUDA_DEVICE: 0
+
+
+editing:
+  model_path: output/
+  iters: 70
+  lr: 3
+  per_step_increase: 0.1
+  use_flops: True
+  per_flops_decrease: 0.1
+  alpha: 0.5
+  max_value_alpha: 4
+  max_grad_decline: 0
