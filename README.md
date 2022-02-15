@@ -1,9 +1,20 @@
-# Learning Versatile Neural Architectures by Propagating Network Codes
+# Learning Versatile Neural Architectures by Propagating Network Codes (ICLR 2022)
 
 Mingyu Ding, Yuqi Huo, Haoyu Lu, Linjie Yang, Zhe Wang, Zhiwu Lu, Jingdong Wang, Ping Luo
 
 
 ![diagram](docs/diagram.png)
+
+Demos and details can be found at the [Project Page](https://network-propagation.github.io/).
+
+If you find our work useful in your research, please consider citing our paper:
+
+    @inproceedings{ding2022learning,
+      author = {Ding, Mingyu and Huo, Yuqi and Lu, Haoyu and Yang, Linjie and Wang, Zhe and Lu, Zhiwu and Wang, Jingdong and Luo, Ping},
+      title = {Learning Versatile Neural Architectures by Propagating Network Codes},
+      booktitle = {International Conference on Learning Representations},
+      year = {2022}
+    }
 
 ## Introduction
 This work includes:  
@@ -17,7 +28,7 @@ We build our benchmark on four computer vision tasks, i.e., image classification
 Totally 9 different settings are included, as shown in the `data/*/trainval.pkl` folders.
 
 Note that each `.pkl` file contains more than 2500 architectures, and their corresponding evaluation results under multiple metrics.
-The original training logs and checkpoints (including model weights and optimizer data) will be uploaded to Google drive (more than 4T). We will share the download link once the upload is complete.
+The original training logs and checkpoints (including model weights and optimizer data) can be found in [Google drive](https://drive.google.com/drive/folders/1Gq4P0BuWnZbzStlZJcPq29qflqN8nTWy?usp=sharing).
 
 ## Quick start
 ### First, train the predictor
