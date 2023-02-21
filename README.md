@@ -28,7 +28,7 @@ We build our benchmark on four computer vision tasks, i.e., image classification
 Totally 9 different settings are included, as shown in the `data/*/trainval.pkl` folders.
 
 Note that each `.pkl` file contains more than 2500 architectures, and their corresponding evaluation results under multiple metrics.
-The original training logs and checkpoints (including model weights and optimizer data) can be found in [Google drive](https://drive.google.com/drive/folders/1Gq4P0BuWnZbzStlZJcPq29qflqN8nTWy?usp=sharing).
+The original training logs and checkpoints (including model weights and optimizer data) can be found in [OneDrive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/u3007305_connect_hku_hk/ErvNgHDxVJ5FsXpvBFm7LQwBY3fCsLCMexJU3NeXOS7kZA?e=GTG3UL).
 
 ## Quick start
 ### First, train the predictor
